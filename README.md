@@ -1,6 +1,6 @@
 # tele-aria2-openwrt
 
-A tele-aria2 bot for openwrt  
+A tele-aria2 bot for openwrt , based on node.js .  
 
 瞎抄的，我小白一个，不提供技术支持  
 只有主程序，没有Luci(不会写)  
