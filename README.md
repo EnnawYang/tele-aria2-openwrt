@@ -1,5 +1,7 @@
 # tele-aria2-openwrt
 
+A tele-aria2 bot for openwrt  
+
 瞎抄的，我小白一个，有问题请自行解决  
 只有主程序，没有Luci(不会写)  
 怎么使用请参考原作者说明  
