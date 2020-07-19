@@ -64,7 +64,7 @@ define Package/tele-aria2/install
 	$(INSTALL_DIR) $(1)/usr/lib/node_modules
 	$(CP) $(PKG_INSTALL_DIR)/usr/lib/node_modules/* $(1)/usr/lib/node_modules/
 	$(INSTALL_DIR) $(1)/usr/bin
-	$(LN) ../usr/lib/node_modules/tele-aria2/dist/run.js $(1)/usr/bin/tele-aria2
+	$(LN) ../lib/node_modules/tele-aria2/dist/run.js $(1)/usr/bin/tele-aria2
 endef
 
 $(eval $(call BuildPackage,tele-aria2))
