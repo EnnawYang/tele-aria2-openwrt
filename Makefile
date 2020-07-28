@@ -7,7 +7,7 @@ include $(TOPDIR)/rules.mk
 PKG_NAME:=tele-aria2
 PKG_NPM_NAME:=tele-aria2
 PKG_VERSION:=0.2.2
-PKG_RELEASE:=1
+PKG_RELEASE:=2
 
 PKG_SOURCE:=$(PKG_NPM_NAME)-$(PKG_VERSION).tgz
 PKG_SOURCE_URL:=https://registry.npmjs.org/$(PKG_NPM_NAME)/-/
@@ -22,17 +22,17 @@ PKG_USE_MIPS16:=0
 
 include $(INCLUDE_DIR)/package.mk
 
-define Package/tele-aria2
-	SUBMENU:=Node.js
-	SECTION:=lang
-	CATEGORY:=Languages
-	TITLE:=A Telegram bot for controlling your aria2 server.
+define Package/$(PKG_NAME)
+	SECTION:=net
+	CATEGORY:=Network
+	SUBMENU:=Telegram Bot
+	TITLE:=A Telegram bot for controlling your aria2 server (Nodejs)
 	URL:=https://www.npmjs.com/package/tele-aria2
 	DEPENDS:=+node
 endef
 
-define Package/tele-aria2/description
-	A Telegram bot for controlling your aria2 server.
+define Package/$(PKG_NAME)/description
+	A Telegram bot for controlling your aria2 server (Nodejs)
 endef
 	
 NODEJS_CPU:=$(subst powerpc,ppc,$(subst aarch64,arm64,$(subst x86_64,x64,$(subst i386,ia32,$(ARCH)))))
@@ -60,11 +60,11 @@ define Build/Compile
 	rm -rf $(TMP_DIR)/npm-cache-$(TMPNPM)
 endef
 
-define Package/tele-aria2/install
+define Package/$(PKG_NAME)/install
 	$(INSTALL_DIR) $(1)/usr/lib/node_modules
 	$(CP) $(PKG_INSTALL_DIR)/usr/lib/node_modules/* $(1)/usr/lib/node_modules/
 	$(INSTALL_DIR) $(1)/usr/bin
 	$(LN) ../lib/node_modules/tele-aria2/dist/run.js $(1)/usr/bin/tele-aria2
 endef
 
-$(eval $(call BuildPackage,tele-aria2))
+$(eval $(call BuildPackage,$(PKG_NAME)))
