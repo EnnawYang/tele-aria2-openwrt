@@ -6,9 +6,9 @@ A tele-aria2 bot for openwrt , based on Node.js .
 只有主程序，没有Luci(不会写)  
 怎么配置请参考原作者说明  
 
-编译:  
+编译：  
 ```
-git clone https://github.com/EnnawYang/flowerss-bot-openwrt  
+git clone https://github.com/EnnawYang/tele-aria2-openwrt  
 make menuconfig  
 choose Network -> Telegram Bot -> tele-aria2 
 make -j1 V=s  
