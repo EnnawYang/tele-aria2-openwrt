@@ -4,7 +4,7 @@ A tele-aria2 bot for openwrt , based on Node.js .
 
 瞎抄的，我小白一个，不提供技术支持  
 只有主程序，没有Luci(不会写)  
-怎么配置请参考原作者说明  
+怎么配置以及使用请参考原作者说明  
 
 编译：  
 ```
